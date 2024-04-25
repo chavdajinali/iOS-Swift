@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" title="HomeVC" id="Y6W-OH-hqX" customClass="HomeVC" customModule="CoreDataDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nt9-oX-PSv">
+                                <rect key="frame" x="15" y="74" width="363" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="uSG-yz-GPX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHJ-Qx-2gI">
+                                <rect key="frame" x="25" y="149" width="343" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Fetch All Register User"/>
+                                <connections>
+                                    <action selector="btnFetchAllData_Clicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ffb-gE-IZ4"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UGL-FF-QEk">
+                                <rect key="frame" x="15" y="213.33333333333331" width="363" height="589.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.raised.slash.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bDD-Wa-RCe">
+                                <rect key="frame" x="15" y="226" width="363" height="401"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="dhZ-jl-Fv3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="UGL-FF-QEk" secondAttribute="bottom" constant="15" id="01F-Jv-7R1"/>
+                            <constraint firstItem="nt9-oX-PSv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="03Z-Af-UBZ"/>
+                            <constraint firstItem="CHJ-Qx-2gI" firstAttribute="top" secondItem="nt9-oX-PSv" secondAttribute="bottom" constant="50" id="6z0-2v-28Q"/>
+                            <constraint firstItem="bDD-Wa-RCe" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="15" id="AcF-6k-Ht8"/>
+                            <constraint firstItem="UGL-FF-QEk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="Kf6-os-9lk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nt9-oX-PSv" secondAttribute="trailing" constant="15" id="QrW-fH-qHL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UGL-FF-QEk" secondAttribute="trailing" constant="15" id="YLH-LG-v9p"/>
+                            <constraint firstItem="nt9-oX-PSv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="YoY-dd-wNL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CHJ-Qx-2gI" secondAttribute="trailing" constant="25" id="ZGX-X3-D3M"/>
+                            <constraint firstItem="bDD-Wa-RCe" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="gUO-cp-HdY"/>
+                            <constraint firstItem="CHJ-Qx-2gI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="l2T-si-cQ0"/>
+                            <constraint firstItem="UGL-FF-QEk" firstAttribute="top" secondItem="CHJ-Qx-2gI" secondAttribute="bottom" constant="30" id="mCM-0P-6cz"/>
+                            <constraint firstItem="bDD-Wa-RCe" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="tqw-eh-ZeS"/>
+                            <constraint firstAttribute="trailing" secondItem="bDD-Wa-RCe" secondAttribute="trailing" constant="15" id="xh7-OJ-gvg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnFetchAllData" destination="CHJ-Qx-2gI" id="5Tu-Qr-hit"/>
+                        <outlet property="imgNoDat" destination="bDD-Wa-RCe" id="IaE-z5-H6o"/>
+                        <outlet property="tblShowAllData" destination="UGL-FF-QEk" id="4yL-od-b42"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-11.450381679389313" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hand.raised.slash.fill" catalog="system" width="120" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
